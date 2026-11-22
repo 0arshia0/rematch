@@ -73,9 +73,20 @@ html[data-t=forest]{--bg:#0f4a3d;--bgimg:linear-gradient(150deg,#0b2e2a,#14634f)
 .k-kpi svg{width:76px}.k-kpi b{direction:ltr;font-size:17px}.k-kpi span{font-size:15px;opacity:.9}
 .k-ring{fill:none;stroke:var(--mint);stroke-width:10;stroke-linecap:round;stroke-dasharray:0 100}.on .k-ring{animation:kring 1.6s .6s forwards}@keyframes kring{to{stroke-dasharray:35 100}}
 .k-end{text-align:center;padding:12px;border-radius:18px;background:rgba(0,0,0,.25)}.k-end b{font-size:34px;direction:ltr;display:inline-block}.k-end p{margin:4px 0 0;font-size:20px}
+.k-final.on{display:grid;grid-template-columns:minmax(280px,.72fr) minmax(520px,1.28fr);grid-template-rows:minmax(0,1fr) auto;gap:18px 34px;overflow:hidden}
+.kf-app{align-self:center;justify-self:center;width:min(100%,360px);height:min(56vh,500px);border-radius:28px;background:#f5f2e8;color:var(--ink);box-shadow:0 22px 55px rgba(0,0,0,.32);padding:16px;box-sizing:border-box;direction:rtl;position:relative;overflow:hidden}
+.kf-appbar{display:flex;align-items:center;justify-content:space-between;font-size:14px;font-weight:800;direction:ltr}.kf-logo{font-size:18px}.kf-live{display:flex;align-items:center;gap:6px;color:#087b5c}.kf-live:before{content:"";width:7px;height:7px;border-radius:50%;background:#06a77d}
+.kf-screen{display:grid;gap:11px;margin-top:14px}.kf-title{font-size:22px;font-weight:800}.kf-listing{display:grid;grid-template-columns:58px 1fr;gap:12px;align-items:center;background:#fff;border-radius:14px;padding:10px;text-align:right}.kf-listing svg{width:52px}.kf-listing b{display:block;font-size:16px}.kf-listing small{display:block;color:#566096;margin-top:2px}.kf-want{display:flex;align-items:center;justify-content:space-between;border:1px solid #cbd0ec;border-radius:12px;padding:9px 11px;font-size:14px}.kf-want b{color:#087b5c}.kf-submit{border:0;border-radius:12px;background:var(--ink);color:#fff;padding:11px;font:inherit;font-weight:800;box-shadow:0 6px 16px rgba(0,0,0,.2)}
+.kf-progress{display:grid;gap:7px;margin-top:2px}.kf-progress span{height:5px;border-radius:5px;background:#daddf0;overflow:hidden}.kf-progress i{display:block;width:100%;height:100%;background:var(--mint);transform:scaleX(0);transform-origin:right}.kf-result{display:flex;align-items:center;gap:10px;background:#d9faee;border-radius:12px;padding:10px;color:#075e48;font-size:14px;font-weight:700;opacity:0;transform:translateY(10px)}.kf-result svg{width:34px;flex:none}
+.kf-system{align-self:center;min-width:0;direction:ltr}.kf-system h2{margin:0 0 6px;text-align:left}.kf-system>p{margin:0 0 18px;color:var(--edge);font-size:18px}.kf-pipeline{position:relative;display:grid;grid-template-columns:repeat(4,1fr);align-items:center;gap:28px;padding:28px 0}.kf-pipeline:before{content:"";position:absolute;left:7%;right:7%;top:50%;height:2px;background:rgba(142,155,232,.38)}
+.kf-stage{position:relative;z-index:1;aspect-ratio:1;max-width:132px;width:100%;justify-self:center;border-radius:50%;background:#f5f2e8;color:var(--ink);display:grid;place-content:center;justify-items:center;gap:5px;padding:8px;box-sizing:border-box;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.25);font-size:13px;font-weight:700}.kf-stage b{font-size:16px}.kf-stage svg{width:38px}.kf-stage[data-step="graph"] svg{width:52px}.kf-stage[data-step="match"]{background:var(--mint)}
+.kf-stage:after{content:"";position:absolute;inset:-7px;border:2px solid var(--mint);border-radius:50%;opacity:0}.kf-packet{position:absolute;z-index:3;left:6%;top:calc(50% - 9px);width:18px;height:18px;border-radius:50%;background:var(--coral);box-shadow:0 5px 14px rgba(0,0,0,.28);opacity:0}.kf-edge{stroke-dasharray:80;stroke-dashoffset:80}.kf-ok{opacity:0;transform-box:fill-box;transform-origin:center}.kf-sysnote{text-align:center;color:var(--mint);font-weight:800;opacity:0}
+.kf-thanks{grid-column:1/-1;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;border-top:1px solid rgba(233,235,255,.24);padding-top:14px;direction:rtl}.kf-thanks h3{font-size:clamp(34px,5vw,64px);line-height:1;margin:0;clip-path:inset(0 100% 0 0)}.kf-thanks p{margin:0;color:var(--edge);font-size:clamp(16px,2vw,22px);direction:ltr;text-align:left;opacity:0}
+.on .kf-submit{animation:kfTap .55s .5s ease-out both}.on .kf-progress i{animation:kfLoad 2.8s 1s cubic-bezier(.16,1,.3,1) both}.on .kf-packet{animation:kfPacket 4.6s 1.2s cubic-bezier(.16,1,.3,1) both}.on .kf-stage:nth-of-type(2):after{animation:kfPulse .6s 1.8s}.on .kf-stage:nth-of-type(3):after{animation:kfPulse .6s 2.8s}.on .kf-stage:nth-of-type(4):after{animation:kfPulse .6s 3.8s}.on .kf-stage:nth-of-type(5):after{animation:kfPulse .6s 4.8s}.on .kf-edge{animation:kfDraw .7s 2.7s ease-out forwards}.on .kf-ok{animation:kfPop .5s 4.3s cubic-bezier(.16,1,.3,1) forwards}.on .kf-sysnote{animation:kfAppear .5s 5.4s ease-out forwards}.on .kf-result{animation:kfResult .55s 6.1s cubic-bezier(.16,1,.3,1) forwards}.on .kf-thanks h3{animation:kfReveal .8s 7.2s cubic-bezier(.16,1,.3,1) forwards}.on .kf-thanks p{animation:kfAppear .6s 7.7s ease-out forwards}
+@keyframes kfTap{45%{transform:scale(.96);background:#10184f}100%{transform:scale(1)}}@keyframes kfLoad{to{transform:scaleX(1)}}@keyframes kfPacket{0%{opacity:0;transform:translateX(0)}8%{opacity:1}90%{opacity:1}100%{opacity:0;transform:translateX(clamp(250px,50vw,720px))}}@keyframes kfPulse{50%{opacity:1;transform:scale(1.08)}100%{opacity:0;transform:scale(1.18)}}@keyframes kfDraw{to{stroke-dashoffset:0}}@keyframes kfPop{0%{opacity:0;transform:scale(.5)}100%{opacity:1;transform:scale(1)}}@keyframes kfAppear{from{opacity:0}to{opacity:1}}@keyframes kfResult{to{opacity:1;transform:none}}@keyframes kfReveal{to{clip-path:inset(0)}}
 .k-sp{margin:0 24px;padding:12px 20px;background:rgba(0,0,0,.3);border-radius:16px;font-size:clamp(16px,1.6vw,22px);line-height:2;max-height:25vh;overflow:auto}
 .k-sp span{opacity:.5;transition:opacity .3s}.k-sp span.r{opacity:1}
-.k-bar{display:flex;align-items:center;gap:10px;padding:10px 24px}
+.k-bar{position:relative;z-index:4;display:flex;align-items:center;gap:10px;padding:10px 24px}
 .k-btn{background:rgba(255,255,255,.14);color:#fff;border:0;border-radius:10px;padding:8px 14px;font:inherit;cursor:pointer}.k-btn:focus-visible,.k-seg:focus-visible{outline:3px solid var(--mint)}
 #segs{flex:1;display:flex;gap:4px}.k-seg{flex:var(--w) 1 0;height:12px;background:rgba(255,255,255,.16);border:0;padding:0;border-radius:6px;overflow:hidden;cursor:pointer}.k-seg i{display:block;height:100%;width:0;background:var(--mint)}
 .k-start{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:rgba(10,14,50,.78);text-align:center}.k-start[hidden]{display:none}.k-start h2{margin:0;font-size:34px}.k-start .k-btn{background:var(--mint);color:var(--ink);font-weight:800;font-size:20px;padding:12px 30px}
@@ -85,8 +96,9 @@ html[data-t=forest]{--bg:#0f4a3d;--bgimg:linear-gradient(150deg,#0b2e2a,#14634f)
 @keyframes spin{to{transform:rotate(360deg)}}@keyframes pls{50%{transform:scale(1.15)}}
 .cap{display:none}.pt{animation:kfl 9s ease-in-out infinite alternate}@keyframes kfl{to{transform:translateY(-34px)}}
 .k-paused *{animation-play-state:paused!important}
-@media(prefers-reduced-motion:reduce){.k-a{opacity:1!important;animation:none!important}.k-orb,.k-up{animation:none}}
-@media(max-width:820px){.k-g2.on{grid-template-columns:1fr;overflow:auto}.k-slide{padding:6px 14px}.k-steps,.k-kpi{grid-template-columns:1fr 1fr}.k-two{grid-template-columns:1fr}.k-duo{flex-wrap:wrap}.k-lab{display:none}}
+@media(prefers-reduced-motion:reduce){.k-a{opacity:1!important;animation:none!important}.k-orb,.k-up{animation:none}.kf-progress i{transform:none}.kf-packet{display:none}.kf-edge{stroke-dashoffset:0}.kf-ok,.kf-sysnote,.kf-result{opacity:1;transform:none}.kf-thanks h3{clip-path:none}.kf-thanks p{opacity:1}.k-final *{animation:none!important}}
+@media(max-width:820px){.k-g2.on{grid-template-columns:1fr;overflow:auto}.k-slide{padding:6px 14px}.k-steps,.k-kpi{grid-template-columns:1fr 1fr}.k-two{grid-template-columns:1fr}.k-duo{flex-wrap:wrap}.k-lab{display:none}.k-final.on{grid-template-columns:minmax(220px,.8fr) minmax(340px,1.2fr);gap:14px}.kf-app{height:min(55vh,420px);padding:12px}.kf-pipeline{gap:10px}.kf-stage{max-width:92px;font-size:11px}.kf-stage b{font-size:13px}.kf-thanks h3{font-size:32px}}
+@media(max-width:580px){.k-final.on{grid-template-columns:1fr;grid-template-rows:auto auto auto;align-content:start;overflow:auto;gap:8px}.kf-app{width:min(100%,340px);height:255px;padding:9px 11px;border-radius:20px}.kf-appbar{font-size:12px}.kf-logo{font-size:14px}.kf-screen{gap:5px;margin-top:5px}.kf-title{font-size:16px}.kf-listing{grid-template-columns:38px 1fr;padding:5px 8px;gap:7px}.kf-listing svg{width:34px}.kf-listing b{font-size:13px}.kf-listing small{font-size:12px}.kf-want{padding:5px 8px;font-size:12px}.kf-submit{padding:7px;font-size:12px}.kf-progress{gap:3px}.kf-progress span{height:3px}.kf-result{padding:5px 8px;font-size:11px}.kf-result svg{width:26px}.kf-system h2,.kf-system>p{text-align:center}.kf-system h2{font-size:20px}.kf-system>p{font-size:13px;margin-bottom:3px}.kf-pipeline{gap:8px;padding:5px 0}.kf-stage{max-width:64px;font-size:11px;padding:6px}.kf-stage svg{width:26px}.kf-stage b{font-size:11px}.kf-stage span{display:none}.kf-sysnote{font-size:12px}.kf-thanks{grid-column:1;align-items:center;padding-top:7px}.kf-thanks h3{font-size:27px}.kf-thanks p{font-size:12px}}
 </style>
 
 <link rel="manifest" href="manifest.webmanifest">
@@ -187,10 +199,40 @@ html[data-t=forest]{--bg:#0f4a3d;--bgimg:linear-gradient(150deg,#0b2e2a,#14634f)
   <div class="k-a" style="--d:.8s"><svg data-ic="stopwatch"></svg><b>Time to First Match</b><span>زمان رسیدن به اولین چرخهٔ معتبر</span></div>
   <div class="k-a" style="--d:1.1s"><svg data-ic="shield"></svg><b>Cancellation &amp; Dispute Rate</b><span>نرخ لغو و اختلاف</span></div>
  </div>
- <div class="k-end k-a" style="--d:2s"><b>ReMatch · Trade Smarter. Share More.</b><p>دارایی‌های پراکنده را به فرصت‌های مشترک تبدیل می‌کنیم.</p></div>
+  <div class="k-end k-a" style="--d:2s"><b>ReMatch · Trade Smarter. Share More.</b><p>دارایی‌های پراکنده را به فرصت‌های مشترک تبدیل می‌کنیم.</p></div>
+</section>
+<section class="k-slide k-final" data-i="10">
+ <div class="kf-app" aria-label="نمایش اپلیکیشن ReMatch در حال یافتن مبادله">
+  <div class="kf-appbar"><span class="kf-logo">ReMatch</span><span class="kf-live">سیستم فعال</span></div>
+  <div class="kf-screen">
+   <div class="kf-title">مبادلهٔ جدید</div>
+   <div class="kf-listing"><svg data-ic="laptop"></svg><div><b>لپ‌تاپ من</b><small>سالم · ارزش تقریبی ۱۲ میلیون</small></div></div>
+   <div class="kf-want"><span>در ازای</span><b>دوچرخه شهری</b></div>
+   <button class="kf-submit" type="button" tabindex="-1">پیدا کردن چرخهٔ مبادله</button>
+   <div class="kf-progress" aria-hidden="true"><span><i></i></span><span><i></i></span><span><i></i></span></div>
+   <div class="kf-result"><svg data-ic="check"></svg><span>چرخهٔ ۳ نفره پیدا شد<br>آمادهٔ تأیید اعضا</span></div>
+  </div>
+ </div>
+ <div class="kf-system">
+  <h2 class="k-h">One request. One complete cycle.</h2>
+  <p>از یک درخواست ساده تا یک مبادلهٔ معتبر</p>
+  <div class="kf-pipeline" aria-label="فرایند سیستم: API، گراف، جستجو و تطبیق">
+   <div class="kf-packet" aria-hidden="true"></div>
+   <div class="kf-stage"><svg data-ic="target"></svg><b>API</b><span>ثبت درخواست</span></div>
+   <div class="kf-stage" data-step="graph">
+    <svg viewBox="0 0 70 70" aria-hidden="true"><g fill="none" stroke="#1a2470" stroke-width="3"><path class="kf-edge" d="M16 48L35 16L55 48L16 48"/><circle cx="16" cy="48" r="6" fill="#ff7a6b"/><circle cx="35" cy="16" r="6" fill="#ffd166"/><circle cx="55" cy="48" r="6" fill="#35d0ba"/></g></svg><b>Graph</b><span>ساخت ارتباط‌ها</span>
+   </div>
+   <div class="kf-stage"><svg data-ic="cycle"></svg><b>DFS + CSP</b><span>کشف و اعتبارسنجی</span></div>
+   <div class="kf-stage" data-step="match">
+    <svg viewBox="0 0 70 70" aria-hidden="true"><circle cx="35" cy="35" r="25" fill="#1a2470"/><path class="kf-ok" d="M22 35l9 9 18-20" fill="none" stroke="#6bf2c0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Match</b><span>چرخهٔ معتبر</span>
+   </div>
+  </div>
+  <div class="kf-sysnote">۳ کاربر · ۳ نیاز · بدون پول نقد</div>
+ </div>
+ <div class="kf-thanks"><h3>ممنون از توجه شما</h3><p>Thank you for listening.</p></div>
 </section>
 
-  <div class="k-start" id="ov"><h2>ارائهٔ ۵ دقیقه‌ای ReMatch</h2><p>۱۰ اسلاید، متن سخنرانی هم‌زمان، و انیمیشن چرخهٔ مبادله</p><button class="k-btn">▶ شروع ارائه</button></div>
+  <div class="k-start" id="ov"><h2>ارائهٔ ۵ دقیقه‌ای ReMatch</h2><button class="k-btn">▶ شروع ارائه</button></div>
  </main>
  <div class="k-sp" id="sp" aria-live="off"></div>
  <div class="k-bar"><button class="k-btn" id="pv" aria-label="قبلی">▶</button><button class="k-btn" id="pb"></button><button class="k-btn" id="nx" aria-label="بعدی">◀</button><div id="segs"></div><button class="k-btn" id="sw">متن سخنرانی</button><button class="k-btn" id="fs">تمام‌صفحه</button></div>
@@ -358,8 +400,8 @@ tag:'<path d="M-22,-6 L-6,-22 H20 V4 L4,22Z" fill="#ffd166" stroke="#1a2470" str
 barcode:'<g fill="#1a2470"><rect x="-22" y="-18" width="4" height="36"/><rect x="-14" y="-18" width="2" height="36"/><rect x="-8" y="-18" width="6" height="36"/><rect x="2" y="-18" width="2" height="36"/><rect x="8" y="-18" width="5" height="36"/><rect x="17" y="-18" width="3" height="36"/></g>',
 shield:'<path d="M0,-24 L20,-16 V0 C20,14 10,22 0,26 C-10,22 -20,14 -20,0 V-16Z" fill="#35d0ba" stroke="#1a2470" stroke-width="3"/><path d="M-8,0 L-2,7 L9,-8" fill="none" stroke="#1a2470" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>',
 stopwatch:'<circle cy="4" r="18" fill="none" stroke="#1a2470" stroke-width="4"/><rect x="-5" y="-22" width="10" height="5" fill="#1a2470"/><path d="M0,4 L0,-8 M0,4 L9,10" stroke="#ef476f" stroke-width="4" stroke-linecap="round"/>'});
-const D=[20,30,30,30,40,45,30,30,25,20];
-const TT=['معرفی ReMatch','مسئله چیست؟','راه‌حل ReMatch','نحوهٔ عملکرد','موتور هوشمند','مثال چرخهٔ واقعی','انتخاب الگوریتم','محدودیت‌ها و ریسک‌ها','نسخهٔ اولیه و اعتماد','ارزش و پایان'];
+const D=[18,28,28,28,37,42,27,27,23,17,25];
+const TT=['معرفی ReMatch','مسئله چیست؟','راه‌حل ReMatch','نحوهٔ عملکرد','موتور هوشمند','مثال چرخهٔ واقعی','انتخاب الگوریتم','محدودیت‌ها و ریسک‌ها','نسخهٔ اولیه و اعتماد','سنجش موفقیت','اپلیکیشن، سیستم و پایان'];
 const SP=[
 'سلام. پروژه‌ای که امروز می‌خوام معرفی کنم ReMatch هست؛ یک پلتفرم هوشمند برای مبادلهٔ کالا و خدمات. ایدهٔ اصلی ما اینه که با استفاده از هوش مصنوعی، کالاها و نیازهای افراد رو به هم متصل کنیم؛ حتی زمانی که مبادلهٔ مستقیم بین دو نفر امکان‌پذیر نیست.',
 'تصور کنید یک نفر لپ‌تاپ اضافه دارد و به دوچرخه نیاز دارد؛ اما فردی که دوچرخه دارد، اصلاً به لپ‌تاپ نیاز ندارد و مثلاً دوربین می‌خواهد. در این شرایط، با وجود اینکه هر دو دارایی و نیاز دارند، معامله انجام نمی‌شود. این مسئله در اقتصاد به نبود تطابق همزمان خواسته‌ها معروفه. در نتیجه، بسیاری از دارایی‌های ارزشمند بدون استفاده باقی می‌مونن.',
@@ -370,7 +412,8 @@ const SP=[
 'چرا DFS با عمق چهار؟ چون مبادله‌های طولانی‌تر در عمل کمتر قابل اجرا هستن و هزینهٔ جستجو تقریباً با توان چهارم میانگین درجهٔ خروجی رشد می‌کنه. پیش از جستجو، گراف رو به مؤلفه‌های قویاً همبند تقسیم می‌کنیم، چون هر چرخه فقط داخل یکی از اون‌هاست. الگوریتم‌هایی مثل Johnson همهٔ چرخه‌ها رو پیدا می‌کنن، ولی طول رو کنترل نمی‌کنن. در نهایت هم از بین چرخه‌های معتبر، مجموعه‌ای بدون تداخل انتخاب می‌کنیم.',
 'البته دنیای واقعی کامل نیست. ارزش دو کالا ممکنه دقیقاً برابر نباشه؛ پس تا یک آستانه اختلاف رو می‌پذیریم و مابه‌التفاوت کوچک رو نقدی تسویه می‌کنیم. اگر نفر آخر در تأیید نهایی منصرف بشه، با مهلت زمانی، اجرای دوبارهٔ جستجو بدون اون نفر و امتیاز منفی مدیریتش می‌کنیم. برای شروع سرد هم با یک جامعهٔ کوچک و مبادلهٔ مستقیم دونفره شروع می‌کنیم.',
 'برای اینکه پروژه در شروع با پیچیدگی بیش‌ازحد مواجه نشه، نسخهٔ MVP رو محدود در نظر گرفتیم. ابتدا در یک جامعهٔ دانشگاهی یا محلهٔ مشخص اجرا می‌شه و فقط دو دستهٔ کالای آموزشی و دیجیتال رو پوشش می‌ده. همچنین برای اعتماد کاربران، وضعیت کالا با عکس ثبت می‌شه، کد رهگیری داریم و هیچ چرخه‌ای قبل از تأیید همهٔ اعضا نهایی نمی‌شه.',
-'موفقیت ReMatch رو صرفاً با تعداد کاربران اندازه نمی‌گیریم؛ بلکه با چرخه‌های پذیرفته‌شده، مبادلات تکمیل‌شده، سرعت پیدا کردن اولین تطابق معتبر و میزان لغو یا اختلاف ارزیابی می‌کنیم. هدف اولیهٔ پایلوت، نرخ پذیرش حداقل ۳۵ درصد هست. در نهایت، ReMatch می‌خواد دارایی‌های بلااستفاده رو به فرصت‌های مشترک تبدیل کنه. ممنون از توجه شما.'];
+ 'موفقیت ReMatch رو صرفاً با تعداد کاربران اندازه نمی‌گیریم؛ بلکه با چرخه‌های پذیرفته‌شده، مبادلات تکمیل‌شده، سرعت پیدا کردن اولین تطابق معتبر و میزان لغو یا اختلاف ارزیابی می‌کنیم. هدف اولیهٔ پایلوت، نرخ پذیرش حداقل ۳۵ درصد هست. ReMatch می‌خواد دارایی‌های بلااستفاده رو به فرصت‌های مشترک تبدیل کنه.',
+ 'در این نمای نهایی، کل تجربه رو یک‌جا می‌بینیم: کاربر کالای خودش و نیازش رو در اپ ثبت می‌کنه؛ درخواست وارد سیستم می‌شه، به گراف تبدیل می‌شه و موتور DFS و CSP یک چرخهٔ معتبر پیدا می‌کنه. نتیجه برای تأیید به اپ برمی‌گرده؛ سه کاربر، سه نیاز برآورده‌شده و بدون نیاز به پول نقد. ممنون از توجه شما.'];
 const fa=s=>String(s).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
 let cid=0;
 const avg=(k,r)=>{const id='c'+(cid++);return `<g transform="scale(${r/44})"><clipPath id="${id}"><circle r="42"/></clipPath><g clip-path="url(#${id})">${AV(U[k])}</g><circle r="43" fill="none" stroke="#f5f2e8" stroke-width="3"/></g>`};
@@ -399,6 +442,7 @@ document.getElementById('tree').innerHTML=ln('ali','nika','#ff7a6b',.4)+ln('nika
 +'<g class="k-a" style="--d:1.9s"><text x="130" y="418" text-anchor="middle" fill="#ff7a6b" font-size="15" font-weight="700">✕ هرس شد (عمق بیش از ۴)</text></g><g class="k-a" style="--d:4.1s"><text x="370" y="418" text-anchor="middle" fill="#6bf2c0" font-size="15" font-weight="700">✓ چرخه بسته شد</text></g>';
 // controller
 const app=document.getElementById('app'),secs=[...document.querySelectorAll('.k-slide')],sp=document.getElementById('sp'),lab=document.getElementById('lab'),tm=document.getElementById('tm'),segs=document.getElementById('segs'),ov=document.getElementById('ov'),pb=document.getElementById('pb'),sum=document.getElementById('sum');
+sp.hidden=matchMedia('(max-width:580px)').matches;
 const total=D.reduce((a,b)=>a+b,0),LAST=D.length-1,N=fa(D.length);
 let i=0,t=0,playing=false,words=[],lastR=0,last=performance.now();
 D.forEach((d,j)=>{const b=document.createElement('button');b.className='k-seg';b.style.setProperty('--w',d);b.title=TT[j];b.setAttribute('aria-label','اسلاید '+fa(j+1)+': '+TT[j]);b.innerHTML='<i></i>';b.onclick=()=>go(j);segs.appendChild(b)});
@@ -411,7 +455,7 @@ function go(j){if(j<0||j>LAST)return;if(i===5&&j!==5)window.RM.stop();i=j;t=0;ov
  lab.textContent='اسلاید '+fa(j+1)+' از '+N+' · '+TT[j];setPlay(true)}
 function mmss(ms){const s=Math.floor(ms/1000);return fa(String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'))}
 function tick(n){const dt=Math.min(200,n-last);last=n;
- if(playing){t+=dt;if(t>=D[i]*1000){if(i<LAST)go(i+1);else{t=D[i]*1000;setPlay(false);ov.hidden=false;ov.querySelector('h2').textContent='پایان ارائه · ۰۵:۰۰';ov.querySelector('button').textContent='↺ پخش مجدد'}}}
+  if(playing){t+=dt;if(t>=D[i]*1000){if(i<LAST)go(i+1);else{t=D[i]*1000;setPlay(false);ov.hidden=false;ov.querySelector('h2').textContent='پایان ارائه · '+mmss(total*1000);ov.querySelector('button').textContent='↺ پخش مجدد'}}}
  const p=t/(D[i]*1000),r=Math.round(p*words.length);if(r!==lastR){words.forEach((w,x)=>w.classList.toggle('r',x<r));lastR=r}
  bars.forEach((b,x)=>b.style.width=(x<i?100:x===i?p*100:0)+'%');
  let el=t;for(let x=0;x<i;x++)el+=D[x]*1000;tm.textContent=mmss(el)+' / '+mmss(total*1000);
